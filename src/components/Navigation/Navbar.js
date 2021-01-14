@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faFire } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -10,7 +10,10 @@ const Navbar = () => {
           <div className='container-fluid'>
             <a className='navbar-brand' href='#'>
               PortfolioHub
-              <i className='fas fa-fire-alt ml-1 logo'></i>
+              <FontAwesomeIcon
+                icon={faFire}
+                style={{ color: 'white', marginLeft: '5px' }}
+              />
             </a>
             <button
               className='navbar-toggler'
