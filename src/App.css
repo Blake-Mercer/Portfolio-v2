@@ -2,6 +2,7 @@
 
 :root {
   --primary-white: #fff;
+  --primary-light-grey: rgb(207, 207, 207);
   --primary-blue: rgb(31, 85, 202);
   --primary-dark: rgba(255, 255, 255, 0);
   --primary-red: rgb(219, 0, 0);
@@ -147,4 +148,49 @@ nav ul li {
 
 .about-heading {
   color: var(--primary-blue);
+}
+
+/************************* Tech *****************************/
+
+.tech-wrapper {
+  text-align: center;
+  padding-bottom: -1rem;
+  background: var(--primary-light-grey);
+}
+
+.box {
+  font-size: 2em !important;
+  margin: 15px !important;
+  opacity: 0.93 !important;
+  justify-content: center;
+  border: 1.7px solid var(--primary-blue) !important;
+  text-align: center !important;
+  color: whitesmoke !important;
+  border-radius: 5px !important;
+  box-shadow: 4px 5px 4px 3px rgba(65, 75, 218, 0.5) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+}
+
+.box:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+}
+
+.box:hover .box-images {
+  color: var(--primary-blue);
+}
+.box-images {
+  padding: 20px !important;
+  line-height: 1 !important;
+  font-size: 2em !important;
+}
+
+.row-2 {
+  justify-content: center;
+}
+
+.tech-wrapper > h1 {
+  text-transform: uppercase;
+  color: var(--primary-white);
 }
