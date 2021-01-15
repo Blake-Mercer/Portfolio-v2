@@ -9,19 +9,42 @@ import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
 
 const Projects = () => {
-  const projectPopup = (pic, name, desc, website) => {
-    const content = (
+  const projectPopup = (pic, name, desc, website, demo) => {
+    let content = (
       <>
         <img className='project-image-popupbox' src={pic} alt={name} />
         <p>{desc}</p>
+        <b>Demo:</b>
+        <a href className='hyper-link' onClick={() => window.open(demo)}>
+          {name}
+        </a>
+        <br />
         <b>
-          {website.includes('github') ? 'View Github:' : 'Live Website:'}{' '}
-        </b>{' '}
+          {website.includes('github')
+            ? 'View code on Github:'
+            : 'Live Website:'}
+        </b>
         <a href className='hyper-link' onClick={() => window.open(website)}>
           {name}
         </a>
       </>
     );
+    if (!demo) {
+      content = (
+        <>
+          <img className='project-image-popupbox' src={pic} alt={name} />
+          <p>{desc}</p>
+          <b>
+            {website.includes('github')
+              ? 'View code on Github:'
+              : 'Live Website:'}
+          </b>
+          <a href className='hyper-link' onClick={() => window.open(website)}>
+            {name}
+          </a>
+        </>
+      );
+    }
 
     PopupboxManager.open({
       content,
@@ -50,7 +73,7 @@ const Projects = () => {
               projectPopup(
                 Yoga,
                 'Bikram Yoga Simsbury',
-                'ayyyooo',
+                'Built with WordPress, Divi.',
                 'https://bikramyogasimsbury.com/'
               )
             }
@@ -64,8 +87,9 @@ const Projects = () => {
               projectPopup(
                 Burger,
                 'Burger Builder App',
-                'ayyyooo',
-                'https://github.com/Blake-Mercer/burger-builder-redux'
+                'Built with React, Redux, Firebase, React-Router, Jest, Enzyme.',
+                'https://github.com/Blake-Mercer/burger-builder-redux',
+                'https://blake-mercer.github.io/burger-builder-redux/'
               )
             }
           />
@@ -78,7 +102,7 @@ const Projects = () => {
               projectPopup(
                 Clothes,
                 'Node JS: Ecommerce Store',
-                'ayyyooo',
+                'Built with Node, Express, Multer, Cookie-Session, FS.',
                 'https://github.com/Blake-Mercer/ecomm-app-node-express'
               )
             }
@@ -93,8 +117,9 @@ const Projects = () => {
                 Picture,
                 // eslint-disable-next-line no-script-url
                 'Javascript: Picture-in-Picture Widget',
-                'ayyyooo',
-                'https://github.com/Blake-Mercer/picture-in-picture-widget'
+                'Built with ',
+                'https://github.com/Blake-Mercer/picture-in-picture-widget',
+                'https://blake-mercer.github.io/picture-in-picture-widget/'
               )
             }
           />

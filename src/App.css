@@ -351,6 +351,14 @@ nav ul li {
 .popupbox-content img {
   margin-bottom: 3rem;
 }
+@media (max-width: 500px) {
+  .popupbox-content img {
+    width: 100%;
+  }
+}
+.popupbox-content p {
+  font-weight: bolder;
+}
 
 .hyper-link {
   cursor: pointer;
