@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import Project from './Project/Project';
 import Yoga from '../../images/yoga.jpg';
 import Burger from '../../images/burger.jpg';
@@ -24,24 +23,17 @@ const Projects = () => {
       </>
     );
 
-    PopupboxManager.open({ content });
-  };
-
-  const [project, setProject] = useState([
-    'Bikram Yoga Simsbury',
-    'Burger Builder App',
-    'Node JS: Ecommerce Store',
-    // eslint-disable-next-line no-script-url
-    'Javascript: Picture-in-Picture Widget',
-  ]);
-
-  const popupboxConfig = {
-    titleBar: {
-      enable: true,
-      text: project,
-    },
-    fadeIn: true,
-    fadeInSpeed: 500,
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: name,
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
   };
 
   return (
@@ -108,7 +100,7 @@ const Projects = () => {
           />
         </div>
       </div>
-      <PopupboxContainer {...popupboxConfig} />
+      <PopupboxContainer />
     </div>
   );
 };
