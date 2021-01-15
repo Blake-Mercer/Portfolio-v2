@@ -11,7 +11,7 @@ const Tech = () => {
           <TechItem name='React' iconName='devicon-react-original ' />
           <TechItem name='Node' iconName='devicon-nodejs-plain ' />
           <TechItem name='Express' iconName='devicon-express-original' />
-          <TechItem name='Bootstrap' iconName='devicon-bootstrap-plain ' />
+          <TechItem name='CSS' iconName='devicon-css3-plain ' />
           <TechItem name='Git' iconName='devicon-git-plain ' />
         </div>
       </div>

@@ -280,3 +280,83 @@ nav ul li {
     direction: ltr;
   }
 }
+
+/************************* Projects *****************************/
+
+.projects-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.project-img {
+  width: 15rem;
+  border: 1px solid var(--primary-white);
+  padding: 0 0.5rem;
+}
+
+.project-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/************ Overflow ***********/
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-dark);
+  width: 15rem;
+  height: 16rem;
+  top: 0;
+  border: 1px solid var(--primary-white);
+  cursor: pointer;
+}
+
+.project-name {
+  color: var(--primary-blue);
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+}
+.project-image-box:hover .overflow {
+  opacity: 80%;
+  transition: 0.3s ease-in-out;
+}
+
+.project-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 6rem;
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+}
+.project-image-box:hover .project-icon {
+  opacity: 90%;
+  transition: 0.4s ease-in-out;
+}
+
+/************ Popupbox ***********/
+
+.project-image-popupbox {
+  width: 25rem;
+  padding: 0 0.5rem;
+}
+
+.popupbox-content {
+  padding: 20px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popupbox-content img {
+  margin-bottom: 3rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-blue);
+}
+
+.hyper-link:hover {
+  color: var(--primary-red);
+}
