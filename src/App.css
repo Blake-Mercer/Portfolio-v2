@@ -3,11 +3,12 @@
 :root {
   --primary-white: #fff;
   --primary-light-grey: rgb(207, 207, 207);
-  --primary-dark-grey: rgb(75, 75, 75);
+  --primary-dark-grey: rgb(58, 58, 58);
   --primary-blue: rgb(31, 85, 202);
   --primary-dark-transparent: rgba(255, 255, 255, 0);
   --primary-dark: rgb(0, 0, 0);
   --primary-red: rgb(219, 0, 0);
+  --primary-green: rgb(15, 199, 70);
   --primary-red-hover: rgb(245, 109, 109);
 }
 
@@ -15,7 +16,7 @@ body {
   font-family: 'Bitter', serif !important;
 }
 
-/************************* NavBar *****************************/
+/************************* NavBar Component *****************************/
 nav {
   z-index: 2;
 }
@@ -152,7 +153,7 @@ nav ul li {
   color: var(--primary-blue);
 }
 
-/************************* Tech *****************************/
+/********************* Tech Component *************************/
 
 .tech-wrapper {
   text-align: center;
@@ -195,7 +196,7 @@ nav ul li {
   color: var(--primary-white);
 }
 
-/************************* Experience *****************************/
+/******************** Experience Component **********************/
 
 .experience {
   padding: 0.7rem;
@@ -281,7 +282,7 @@ nav ul li {
   }
 }
 
-/************************* Projects *****************************/
+/******************* Projects Component *****************************/
 
 .projects-wrapper {
   background: var(--primary-light-grey);
@@ -367,4 +368,106 @@ nav ul li {
 
 .hyper-link:hover {
   color: var(--primary-red);
+}
+
+/************************* Contact Component *****************************/
+
+.contact {
+  background-color: var(--primary-dark-grey);
+  padding: 3rem 0;
+}
+
+.contact h1 {
+  color: var(--primary-blue);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.contact p {
+  color: var(--primary-light-grey);
+  font-size: 1.3rem;
+}
+
+/* ******** Inputs ******* */
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.1rem solid var(--primary-white);
+  border-radius: 0;
+  color: var(--primary-white);
+  outline: 0 !important;
+  box-shadow: none !important;
+  top: 0;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+}
+
+.contact .container {
+  padding: 4rem 0;
+}
+.contact p {
+  padding: 0 2rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  background: transparent;
+  color: var(--primary-white);
+  border-bottom: 0.1rem solid var(--primary-light-grey);
+}
+
+.contact textarea {
+  height: 12.84rem !important;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  background: none;
+}
+
+.line {
+  position: relative;
+  width: 0;
+  top: -0.8rem;
+  height: 0.125rem;
+  background: var(--primary-blue);
+  display: inline-block;
+}
+input:focus + .line,
+textarea:focus + .line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+input.form-control {
+  margin: -0.2rem 0;
+}
+textarea.form-control {
+  margin: -0.2rem 0;
+}
+
+.error-message {
+  color: var(--primary-white);
+  background: var(--primary-red);
+  text-align: left;
+}
+
+.success-message {
+  color: var(--primary-green);
+  background: var(--primary-white);
+  font-weight: 900;
+}
+
+/* ******** Media ****** */
+
+@media (max-width: 768px) {
+  .contact .container {
+    padding: 0 1rem;
+  }
 }
