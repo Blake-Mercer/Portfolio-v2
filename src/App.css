@@ -1,38 +1,518 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap');
+
+:root {
+  --primary-white: #fff;
+  --primary-light-grey: rgb(207, 207, 207);
+  --primary-dark-grey: rgb(58, 58, 58);
+  --primary-blue: rgb(31, 85, 202);
+  --primary-dark-transparent: rgba(255, 255, 255, 0);
+  --primary-dark: rgb(0, 0, 0);
+  --primary-red: rgb(219, 0, 0);
+  --primary-green: rgb(15, 199, 70);
+  --primary-red-hover: rgb(245, 109, 109);
+}
+
+body {
+  font-family: 'Bitter', serif !important;
+}
+
+/************************* NavBar Component *****************************/
+nav {
+  z-index: 2;
+}
+/********* Nav Links ********/
+nav a.nav-link {
+  letter-spacing: 0.4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+nav ul li {
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  margin-right: 7px;
+  margin-left: 7px;
+  color: var(--primary-white) !important;
+  border-bottom: 0.18rem solid var(--primary-dark-transparent);
+}
+
+.navbar-brand {
+  max-width: 17.25rem;
+  padding: 0 !important;
+  height: 3rem !important;
+  margin-top: 20px !important;
+  font-weight: 600 !important;
+  color: whitesmoke !important;
+}
+
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+  border-bottom: 0.18rem solid var(--primary-white);
+}
+
+.navbar-nav > li > a:hover {
+  border-bottom: 0.18rem solid var(--primary-white);
+}
+
+/************************* Header *****************************/
+.header-wrapper {
+  position: relative;
+  background: url('./images/laptop.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  position: absolute;
+  margin-top: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-info h1 {
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* ********** Typed Text ********** */
+
+.text-typed {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+@media (max-width: 500px) {
+  .text-typed {
+    font-size: 1.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ********** Header Main Offer Button ********** */
+
+.btn-main-offer {
+  border: 1px solid var(--primary-white);
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 8px;
+  text-decoration: none !important;
+  color: var(--primary-white) !important;
+  margin-top: 2rem;
+}
+
+.btn-resume {
+  justify-content: center;
+  border: 1px solid var(--primary-blue);
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 8px;
+  text-decoration: none !important;
+  color: var(--primary-blue) !important;
+  display: inherit;
+  max-width: 250px;
+  align-items: center;
+}
+
+.btn-main-offer:hover {
+  border: 1px solid var(--primary-red-hover);
+  transition: 0.2s ease-in-out;
+}
+
+/* ********** Particle JS ********** */
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+@media (max-width: 750px) {
+  .particle-canvas {
+    display: none;
+  }
+}
+
+/************************* About Me *****************************/
+
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-img {
+  border-radius: 50%;
+  padding: 0.3rem;
+  max-width: 100%;
+}
+
+.about-heading {
+  color: var(--primary-blue);
+}
+
+/********************* Tech Component *************************/
+
+.tech-wrapper {
+  text-align: center;
+  padding-bottom: -1rem;
+  background: var(--primary-light-grey);
+}
+
+.box {
+  font-size: 2em !important;
+  margin: 15px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid var(--primary-blue) !important;
+  color: whitesmoke !important;
+  border-radius: 5px !important;
+  box-shadow: 4px 5px 4px 3px rgba(65, 75, 218, 0.5) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+}
+
+.box:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+}
+
+.box:hover .box-images {
+  color: var(--primary-blue);
+}
+.box-images {
+  padding: 20px !important;
+  line-height: 1 !important;
+  font-size: 2em !important;
+}
+
+.row-2 {
+  justify-content: center;
+}
+
+.tech-wrapper > h1 {
+  text-transform: uppercase;
+  color: var(--primary-white);
+}
+
+/******************** Experience Component **********************/
+
+.experience {
+  padding: 0.7rem;
+}
+.experience-wrapper {
+  position: relative;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.experience h1 {
+  text-transform: uppercase;
+  color: var(--primary-blue);
+}
+.experience p {
+  color: var(--primary-dark);
+  font-weight: bolder;
+}
+
+.experience-wrapper::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 50%;
+  margin-left: -0.0625rem;
+  width: 0.125rem;
+  height: 100%;
+  background-color: var(--primary-dark-grey);
+  z-index: 1;
+}
+
+.timeline-block {
+  width: calc(50% + 0.5rem);
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl;
+}
+
+.marker {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.35rem solid var(--primary-dark);
+  background: var(--primary-red);
+  margin-top: 0.2rem;
+  z-index: 3;
+}
+
+.timeline-content {
+  width: 95%;
+  padding: 0 0.9rem;
+  color: var(--primary-blue);
+  direction: ltr;
+}
+
+/* ********* Media ********* */
+
+@media (max-width: 768px) {
+  .experience .container {
+    padding-left: 0;
+  }
+  .experience-wrapper::before {
+    left: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .timeline-block-right {
+    float: none;
+    width: 100%;
+  }
+  .timeline-block-left {
+    float: none;
+    width: 100%;
+    direction: ltr;
+  }
+}
+
+/******************* Projects Component *****************************/
+
+.projects-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.project-img {
+  width: 15rem;
+  border: 1px solid var(--primary-white);
+  padding: 0 0.5rem;
+}
+
+.project-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/************ Overflow ***********/
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-dark);
+  width: 15rem;
+  height: 16rem;
+  top: 0;
+  border: 1px solid var(--primary-white);
+  cursor: pointer;
+}
+
+.project-name {
+  color: var(--primary-blue);
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+}
+.project-image-box:hover .overflow {
+  opacity: 80%;
+  transition: 0.3s ease-in-out;
+}
+
+.project-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 6rem;
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+}
+.project-image-box:hover .project-icon {
+  opacity: 90%;
+  transition: 0.4s ease-in-out;
+}
+
+/************ Popupbox ***********/
+
+.project-image-popupbox {
+  width: 25rem;
+  padding: 0 0.5rem;
+}
+
+.popupbox-content {
+  padding: 20px 24px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.popupbox-content img {
+  margin-bottom: 3rem;
+}
+@media (max-width: 500px) {
+  .popupbox-content img {
+    width: 100%;
+  }
+}
+.popupbox-wrapper {
+  margin-top: 7rem !important;
+}
+.popupbox-content p {
+  font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-blue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hyper-link:hover {
+  color: var(--primary-red);
+}
+
+/************************* Contact Component *****************************/
+
+.contact {
+  background-color: var(--primary-dark-grey);
+  padding: 3rem 0;
+}
+
+.contact h1 {
+  color: var(--primary-blue);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.contact p {
+  color: var(--primary-light-grey);
+  font-size: 1.3rem;
+}
+
+/* ******** Inputs ******* */
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.1rem solid var(--primary-white);
+  border-radius: 0;
+  color: var(--primary-white);
+  outline: 0 !important;
+  box-shadow: none !important;
+  top: 0;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+}
+
+.contact .container {
+  padding: 4rem 0;
+}
+.contact p {
+  padding: 0 2rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  background: transparent;
+  color: var(--primary-white);
+  border-bottom: 0.1rem solid var(--primary-light-grey);
+}
+
+.contact textarea {
+  height: 12.84rem !important;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  background: none;
+}
+
+.line {
+  position: relative;
+  width: 0;
+  top: -0.8rem;
+  height: 0.125rem;
+  background: var(--primary-blue);
+  display: inline-block;
+}
+input:focus + .line,
+textarea:focus + .line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+input.form-control {
+  margin: -0.2rem 0;
+}
+textarea.form-control {
+  margin: -0.2rem 0;
+}
+
+.error-message {
+  color: var(--primary-white);
+  background: var(--primary-red);
+  text-align: left;
+}
+
+.success-message {
+  color: var(--primary-green);
+  background: var(--primary-white);
+  font-weight: 900;
+}
+
+/* ******** Media ****** */
+
+@media (max-width: 768px) {
+  .contact .container {
+    padding: 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+/************************* Footer Component *****************************/
+
+.footer {
+  background: var(--primary-dark);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer .social a {
+  cursor: pointer;
+  margin: 10px;
 }
