@@ -118,23 +118,6 @@ nav ul li {
   margin-top: 2rem;
 }
 
-.btn-resume {
-  justify-content: center;
-  border: 1px solid var(--primary-blue);
-  text-transform: uppercase;
-  border-radius: 5px;
-  padding: 8px;
-  text-decoration: none !important;
-  color: var(--primary-blue) !important;
-  display: inherit;
-  max-width: 250px;
-  align-items: center;
-}
-.btn-resume:hover {
-  border: 1px solid var(--primary-red-hover);
-  transition: 0.2s ease-in-out;
-}
-
 .btn-main-offer:hover {
   border: 1px solid var(--primary-red-hover);
   transition: 0.2s ease-in-out;
@@ -229,6 +212,24 @@ nav ul li {
   text-transform: uppercase;
   color: var(--primary-blue);
 }
+
+.btn-resume {
+  justify-content: center;
+  border: 1px solid var(--primary-blue);
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 8px;
+  text-decoration: none !important;
+  color: var(--primary-blue) !important;
+  display: inherit;
+  max-width: 250px;
+  align-items: center;
+}
+.btn-resume:hover {
+  border: 1px solid var(--primary-red-hover);
+  transition: 0.2s ease-in-out;
+}
+
 .experience p {
   color: var(--primary-dark);
   font-weight: bolder;
