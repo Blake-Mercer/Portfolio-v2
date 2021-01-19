@@ -3,7 +3,7 @@ import TechItem from './TechItem/TechItem';
 
 const Tech = () => {
   return (
-    <div className='tech-wrapper'>
+    <div id='tech' className='tech-wrapper'>
       <h1 className='py-5'>My Tech Toolkit</h1>
       <div className='container'>
         <div className='row row-2'>

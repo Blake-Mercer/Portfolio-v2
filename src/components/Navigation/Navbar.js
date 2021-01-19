@@ -1,14 +1,24 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faFire } from '@fortawesome/free-solid-svg-icons';
+import { scroller } from 'react-scroll';
 
 const Navbar = () => {
+  const scrollTo = (path) => {
+    scroller.scrollTo(path, {
+      duration: 800,
+      delay: 0,
+      offset: -100,
+      smooth: 'easeInOutQuart',
+    });
+  };
+
   return (
     <div>
-      <nav className='navbar navbar-expand-lg navbar-light bg-dark'>
+      <nav className='navbar navbar-expand-lg navbar-light bg-dark fixed-top'>
         <div className='container'>
           <div className='container-fluid'>
-            <a className='navbar-brand' href='#'>
+            <a className='navbar-brand' href='s'>
               PortfolioHub
               <FontAwesomeIcon
                 icon={faFire}
@@ -18,44 +28,78 @@ const Navbar = () => {
             <button
               className='navbar-toggler'
               type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#navbarSupportedContent'
-              aria-controls='navbarSupportedContent'
+              data-toggle='collapse'
+              data-target='#navbarDiv'
               aria-expanded='false'
               aria-label='Toggle navigation'>
               <FontAwesomeIcon icon={faBars} style={{ color: 'white' }} />
             </button>
-            <div
-              className='collapse navbar-collapse'
-              id='navbarSupportedContent'>
+            <div className='collapse navbar-collapse' id='navbarDiv'>
               <ul className='navbar-nav ml-auto'>
                 <li className='nav-item active'>
-                  <a className='nav-link ' aria-current='page' href='#'>
+                  <a
+                    to='home'
+                    data-toggle='collapse'
+                    data-target='.navbar-collapse.show'
+                    className='nav-link'
+                    href='s'
+                    onClick={() => scrollTo('home')}
+                    aria-current='page'>
                     Home
                   </a>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#'>
+                  <a
+                    to='about'
+                    className='nav-link'
+                    data-toggle='collapse'
+                    data-target='.navbar-collapse.show'
+                    href='s'
+                    onClick={() => scrollTo('about')}>
                     About
                   </a>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#'>
-                    Experience
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#'>
-                    Projects
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#'>
+                  <a
+                    to='tech'
+                    href='s'
+                    data-toggle='collapse'
+                    data-target='.navbar-collapse.show'
+                    className='nav-link'
+                    onClick={() => scrollTo('tech')}>
                     Tech
                   </a>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#'>
+                  <a
+                    to='experience'
+                    className='nav-link'
+                    data-toggle='collapse'
+                    data-target='.navbar-collapse.show'
+                    href='s'
+                    onClick={() => scrollTo('experience')}>
+                    Experience
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a
+                    to='projects'
+                    className='nav-link'
+                    data-toggle='collapse'
+                    data-target='.navbar-collapse.show'
+                    href='s'
+                    onClick={() => scrollTo('projects')}>
+                    Projects
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a
+                    to='contact'
+                    className='nav-link'
+                    data-toggle='collapse'
+                    data-target='.navbar-collapse.show'
+                    onClick={() => scrollTo('contact')}
+                    href='s'>
                     Contact
                   </a>
                 </li>

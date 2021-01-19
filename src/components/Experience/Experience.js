@@ -2,9 +2,19 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <div className='experience'>
-      <div className='d-flex justify-content-center my-5'>
+    <div id='experience' className='experience'>
+      <div className='d-flex justify-content-center align-items-center my-5 flex-column'>
         <h1>Experience</h1>
+        <br />
+        <a
+          // eslint-disable-next-line
+          href={'bro'}
+          target='_blank'
+          rel='noreferrer'
+          className='btn-resume'>
+          {' '}
+          Download CV/Resume
+        </a>
       </div>
       <div className='container experience-wrapper'>
         <div className='timeline-block timeline-block-right'>
@@ -15,9 +25,9 @@ const Experience = () => {
             </h2>
             <h3>2020-Present</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio iusto earum eos, numquam quidem odit expedita ipsa
-              reprehenderit alias doloribus?
+              Developed bikramyogasimbury.com hosted on Wordpress styled with
+              DIVI. Integrated the website with the platform MindBody allowing
+              studio members to signup for classes online.
             </p>
           </div>
         </div>
@@ -30,9 +40,10 @@ const Experience = () => {
             </h2>
             <h3>2019-2020</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio iusto earum eos, numquam quidem odit expedita ipsa
-              reprehenderit alias doloribus?
+              Improve client website effectiveness by measuring, collecting,
+              analyzing, and reporting web-traffic data using Google Analytics.
+              Create client dashboards using client data to screen for
+              actionable data points. Proficient in Microsoft Excel.
             </p>
           </div>
         </div>
@@ -45,9 +56,9 @@ const Experience = () => {
             </h2>
             <h3>2016-2019</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio iusto earum eos, numquam quidem odit expedita ipsa
-              reprehenderit alias doloribus?
+              4 years of hands-on paid media experience including execution of
+              paid search, paid social advertising and programmatic display for
+              clients in various industries.
             </p>
           </div>
         </div>

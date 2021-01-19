@@ -8,6 +8,7 @@ import Tech from './components/Tech/Tech';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -36,10 +37,11 @@ function App() {
       <Navbar />
       <Header />
       <About />
-      <Tech />
-      <Experience />
       <Projects />
+      <Experience />
+      <Tech />
       <Contact />
+      <Footer />
     </>
   );
 }

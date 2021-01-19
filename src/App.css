@@ -65,12 +65,12 @@ nav ul li {
   background: url('./images/laptop.jpg') no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -80,6 +80,7 @@ nav ul li {
   align-items: center;
   text-align: center;
   position: absolute;
+  margin-top: 50px;
   top: 0;
   left: 0;
   right: 0;
@@ -115,6 +116,19 @@ nav ul li {
   text-decoration: none !important;
   color: var(--primary-white) !important;
   margin-top: 2rem;
+}
+
+.btn-resume {
+  justify-content: center;
+  border: 1px solid var(--primary-blue);
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 8px;
+  text-decoration: none !important;
+  color: var(--primary-blue) !important;
+  display: inherit;
+  max-width: 250px;
+  align-items: center;
 }
 
 .btn-main-offer:hover {
@@ -357,6 +371,9 @@ nav ul li {
     width: 100%;
   }
 }
+.popupbox-wrapper {
+  margin-top: 7rem !important;
+}
 .popupbox-content p {
   font-weight: bolder;
 }
@@ -470,4 +487,32 @@ textarea.form-control {
   .contact .container {
     padding: 0 1rem;
   }
+}
+
+/************************* Footer Component *****************************/
+
+.footer {
+  background: var(--primary-dark);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer .social a {
+  cursor: pointer;
+  margin: 10px;
 }

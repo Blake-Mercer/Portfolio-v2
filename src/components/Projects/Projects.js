@@ -24,7 +24,7 @@ const Projects = () => {
             ? 'View code on Github:'
             : 'Live Website:'}
         </b>
-        <a href className='hyper-link' onClick={() => window.open(website)}>
+        <a href='s' className='hyper-link' onClick={() => window.open(website)}>
           {name}
         </a>
       </>
@@ -39,7 +39,10 @@ const Projects = () => {
               ? 'View code on Github:'
               : 'Live Website:'}
           </b>
-          <a href className='hyper-link' onClick={() => window.open(website)}>
+          <a
+            href='a'
+            className='hyper-link'
+            onClick={() => window.open(website)}>
             {name}
           </a>
         </>
@@ -60,7 +63,7 @@ const Projects = () => {
   };
 
   return (
-    <div className='projects-wrapper'>
+    <div id='projects' className='projects-wrapper'>
       <div className='container'>
         <h1 className='text-uppercase text-center py-5'>Projects</h1>
         <div className='image-box-wrapper row justify-content-center'>
@@ -87,7 +90,7 @@ const Projects = () => {
               projectPopup(
                 Burger,
                 'Burger Builder App',
-                'Built with React, Redux, Firebase, React-Router, Jest, Enzyme.',
+                'Burger building application. Built with React, Redux, Firebase, React-Router, Jest, Enzyme.',
                 'https://github.com/Blake-Mercer/burger-builder-redux',
                 'https://blake-mercer.github.io/burger-builder-redux/'
               )
@@ -117,7 +120,7 @@ const Projects = () => {
                 Picture,
                 // eslint-disable-next-line no-script-url
                 'Javascript: Picture-in-Picture Widget',
-                'Built with ',
+                'Built with Vanilla JS and Media Web Devices API.',
                 'https://github.com/Blake-Mercer/picture-in-picture-widget',
                 'https://blake-mercer.github.io/picture-in-picture-widget/'
               )
