@@ -18,7 +18,10 @@ const Navbar = () => {
       <nav className='navbar navbar-expand-lg navbar-light bg-dark fixed-top'>
         <div className='container'>
           <div className='container-fluid'>
-            <a className='navbar-brand' href='s'>
+            <a
+              className='navbar-brand'
+              href='#'
+              onClick={() => scrollTo('home')}>
               PortfolioHub
               <FontAwesomeIcon
                 icon={faFire}
