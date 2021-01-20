@@ -15,7 +15,7 @@ const Projects = () => {
         <img className='project-image-popupbox' src={pic} alt={name} />
         <p>{desc}</p>
         <b>Demo:</b>
-        <a href className='hyper-link' onClick={() => window.open(demo)}>
+        <a href='#' className='hyper-link' onClick={() => window.open(demo)}>
           {name}
         </a>
         <br />
@@ -24,7 +24,7 @@ const Projects = () => {
             ? 'View code on Github:'
             : 'Live Website:'}
         </b>
-        <a href='s' className='hyper-link' onClick={() => window.open(website)}>
+        <a href='#' className='hyper-link' onClick={() => window.open(website)}>
           {name}
         </a>
       </>
@@ -40,7 +40,7 @@ const Projects = () => {
               : 'Live Website:'}
           </b>
           <a
-            href='a'
+            href='#'
             className='hyper-link'
             onClick={() => window.open(website)}>
             {name}
