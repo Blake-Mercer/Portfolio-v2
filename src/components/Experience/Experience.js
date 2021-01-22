@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from '../../images/resume.pdf';
 
 const Experience = () => {
   return (
@@ -8,7 +9,7 @@ const Experience = () => {
         <br />
         <a
           // eslint-disable-next-line
-          href={'bro'}
+          href={resume}
           target='_blank'
           rel='noreferrer'
           className='btn-resume'>
