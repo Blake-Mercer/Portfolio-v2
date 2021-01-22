@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio-v2/static/css/main.26d52e15.chunk.css",
-    "main.js": "/Portfolio-v2/static/js/main.8e2afb6c.chunk.js",
-    "main.js.map": "/Portfolio-v2/static/js/main.8e2afb6c.chunk.js.map",
+    "main.js": "/Portfolio-v2/static/js/main.55519fed.chunk.js",
+    "main.js.map": "/Portfolio-v2/static/js/main.55519fed.chunk.js.map",
     "runtime-main.js": "/Portfolio-v2/static/js/runtime-main.52cd88e3.js",
     "runtime-main.js.map": "/Portfolio-v2/static/js/runtime-main.52cd88e3.js.map",
     "static/css/2.56490527.chunk.css": "/Portfolio-v2/static/css/2.56490527.chunk.css",
@@ -18,6 +18,7 @@
     "static/media/clothes.f4a62fe6.jpg": "/Portfolio-v2/static/media/clothes.f4a62fe6.jpg",
     "static/media/App.css": "/Portfolio-v2/static/media/laptop.be4d8c45.jpg",
     "static/media/picture.b8fd0769.jpg": "/Portfolio-v2/static/media/picture.b8fd0769.jpg",
+    "static/media/resume.0eba4752.pdf": "/Portfolio-v2/static/media/resume.0eba4752.pdf",
     "static/media/riding.c25b8e06.png": "/Portfolio-v2/static/media/riding.c25b8e06.png",
     "static/media/yoga.7aa3f5c1.jpg": "/Portfolio-v2/static/media/yoga.7aa3f5c1.jpg"
   },
@@ -26,6 +27,6 @@
     "static/css/2.56490527.chunk.css",
     "static/js/2.751e4eb3.chunk.js",
     "static/css/main.26d52e15.chunk.css",
-    "static/js/main.8e2afb6c.chunk.js"
+    "static/js/main.55519fed.chunk.js"
   ]
 }
