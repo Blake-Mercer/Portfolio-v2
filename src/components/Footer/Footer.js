@@ -1,5 +1,6 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
+import Resume from '../../images/resume.pdf'
 
 const Footer = () => {
   const scrollTo = (path) => {
@@ -17,10 +18,10 @@ const Footer = () => {
         <div className='row text-center justify-content-center'>
           <div className='col-lg-4 col-md-6 col-sm-6 mb-3'>
             <div className='d-flex justify-content-center'>
-              <p>City Bro Chill</p>
+              <p>Former Stats Guy</p>
             </div>
             <div className='d-flex justify-content-center'>
-              <a href='adsfasdf'>Resume</a>
+              <a href={Resume}>Resume</a>
             </div>
             <div className='d-flex justify-content-center'>
               <p>Blake.Mercer93@gmail.com</p>
