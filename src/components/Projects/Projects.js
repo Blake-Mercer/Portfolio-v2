@@ -1,12 +1,13 @@
 import React from 'react';
 import Project from './Project/Project';
-import Yoga from '../../images/yoga.jpg';
+import Pokemon from '../../images/pokemon.jpg';
 import Burger from '../../images/burger.jpg';
 import Clothes from '../../images/clothes.jpg';
 import Picture from '../../images/picture.jpg';
 // React Popupbox
 import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
+import { Carousel } from './Project/Carousel';
 
 const Projects = () => {
   const projectPopup = (pic, name, desc, website, demo) => {
@@ -69,12 +70,12 @@ const Projects = () => {
         <div className='image-box-wrapper row justify-content-center'>
           <Project
             icon={'fas fa-search-plus'}
-            picture={Yoga}
+            picture={Pokemon}
             alt='Bikram Yoga Simsbury'
             name='Bikramyogasimbury.com'
             onClick={() =>
               projectPopup(
-                Yoga,
+                Pokemon,
                 'Bikram Yoga Simsbury',
                 'Built with WordPress, Divi.',
                 'https://bikramyogasimsbury.com/'

@@ -10,6 +10,9 @@
   --primary-red: rgb(219, 0, 0);
   --primary-green: rgb(15, 199, 70);
   --primary-red-hover: rgb(245, 109, 109);
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
 }
 
 body {
@@ -69,7 +72,7 @@ nav ul li {
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   height: 100vh;
 }
 
@@ -79,17 +82,32 @@ nav ul li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: absolute;
-  margin-top: 50px;
-  top: 0;
+  position: relative;
+  top: 150px;
   left: 0;
   right: 0;
-  bottom: 0;
+  z-index: 1;
+}
+.main-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 250px;
+  left: 0;
+  right: 0;
   z-index: 1;
 }
 
 .main-info h1 {
   color: var(--primary-blue);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.main-carousel h5 {
+  color: var(--primary-white);
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -144,10 +162,40 @@ nav ul li {
   justify-content: center;
   align-items: center;
 }
+
+.cardcontainer {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: steelblue;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.banner-img {
+  position: absolute;
+  background-image: url('images/laptop.jpg');
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .profile-img {
-  border-radius: 50%;
-  padding: 0.3rem;
-  max-width: 100%;
+  width: 8rem;
+  clip-path: circle(60px at center);
+  margin-top: 4.5rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description {
+  margin: 1rem 2rem;
+  font-size: 0.9rem;
 }
 
 .about-heading {
@@ -521,4 +569,12 @@ textarea.form-control {
 .footer .social a {
   cursor: pointer;
   margin: 10px;
+}
+
+/* ************** CAROURSEL ************* */
+
+.carousel-item {
+  height: 18rem;
+  width: 18rem;
+  background-color: transparent;
 }
