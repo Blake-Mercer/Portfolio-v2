@@ -71,14 +71,15 @@ export const Carousel = () => {
             <Project
               icon={'fas fa-search-plus'}
               picture={Pokemon}
-              alt='Bikram Yoga Simsbury'
+              alt='Blake Pokedex'
               name='Blakes Pokédex'
               onClick={() =>
                 projectPopup(
                   Pokemon,
                   'React Pokédex',
                   'Built with React, React-Router, Axios',
-                  'https://github.com/Blake-Mercer/pokedex'
+                  'https://github.com/Blake-Mercer/pokedex',
+                  'https://blake-mercer.github.io/pokedex/#/'
                 )
               }
             />

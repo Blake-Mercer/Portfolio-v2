@@ -7,7 +7,6 @@ import Picture from '../../images/picture.jpg';
 // React Popupbox
 import { PopupboxManager, PopupboxContainer } from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
-import { Carousel } from './Project/Carousel';
 
 const Projects = () => {
   const projectPopup = (pic, name, desc, website, demo) => {
@@ -71,14 +70,15 @@ const Projects = () => {
           <Project
             icon={'fas fa-search-plus'}
             picture={Pokemon}
-            alt='Bikram Yoga Simsbury'
-            name='Bikramyogasimbury.com'
+            alt='Blake Pokedex'
+            name='Blakes Pokédex'
             onClick={() =>
               projectPopup(
                 Pokemon,
-                'Bikram Yoga Simsbury',
-                'Built with WordPress, Divi.',
-                'https://bikramyogasimsbury.com/'
+                'Blake Pokédex',
+                'Built with React, React-Router, Axios',
+                'https://github.com/Blake-Mercer/pokedex',
+                'https://blake-mercer.github.io/pokedex/#/'
               )
             }
           />
