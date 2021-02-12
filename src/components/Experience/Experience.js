@@ -22,7 +22,9 @@ const Experience = () => {
           <div className='marker'></div>
           <div className='timeline-content'>
             <h2>
-              <strong>Web Dev / Asst. Director | Bikram Yoga Simsbury</strong>
+              <strong>
+                Web Dev / Paid Media Manager | Bikram Yoga Simsbury
+              </strong>
             </h2>
             <h3>2020-Present</h3>
             <p>
